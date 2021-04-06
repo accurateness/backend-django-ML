@@ -4,3 +4,4 @@ django-cors-headers==3.5.0
 requests
 djangorestframework_simplejwt
 django-environ
+json

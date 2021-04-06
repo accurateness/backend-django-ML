@@ -14,7 +14,12 @@ from rest_framework.decorators import api_view, permission_classes, authenticati
 from django.views.decorators.csrf import csrf_exempt
 import os
 
+'''
+Here we define the API to receive a post request in the form of a JSON object including the features.
 
+The API asks the ML Flask API regarding the predictions.
+
+'''
 
 
 @api_view(('POST',))
@@ -45,11 +50,11 @@ def api_mpg(request, *args, **kwargs):
     "Model Year":        float(data['modelYear']),
     "Europe":             europe,
     "Japan":             japan,
-    "USA":                      usa }}
+    "USA": usa }}
 
-    
+    print(car_record)
 
-    result = requests.post("http://localhost"  + ":8002/api/mpg", json=car_record) # os.environ['AUTH_ADDRESS'] 
+    result = requests.post("http://"+ os.environ['AUTH_ADDRESS']  + ":8002/api/mpg", json=car_record) # os.environ['AUTH_ADDRESS'] 
 
     print("This is the result of flask ML api")
     print(result.content)
