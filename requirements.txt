@@ -1,0 +1,6 @@
+Django==2.2
+djangorestframework==3.11.1
+django-cors-headers==3.5.0
+requests
+djangorestframework_simplejwt
+django-environ

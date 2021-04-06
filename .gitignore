@@ -1,0 +1,6 @@
+/secret_settings.py
+/__pycache__
+/MLAnalytics/__pycache__
+/ML_API/__pycache__
+/ML_API/migrations
+/.vscode
