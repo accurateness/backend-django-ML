@@ -1,0 +1,6 @@
+.git
+.gitignore
+__pycache__
+.DS_Store
+/MLAnalytics/__pycache__
+/ML_API/__pycache__
